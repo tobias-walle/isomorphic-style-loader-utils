@@ -1,0 +1,30 @@
+{
+  "name": "isomorphic-style-loader-decorator",
+  "version": "1.0.0",
+  "description": "A wrapper for the 'isomorphic-style-loader' which allows the use of Typescript decorators.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasWalle/isomorphic-style-loader-decorator.git"
+  },
+  "keywords": [
+    "isomorphic-style-loader",
+    "webpack",
+    "typescript"
+  ],
+  "author": "Tobias Walle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TobiasWalle/isomorphic-style-loader-decorator/issues"
+  },
+  "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-decorator#readme",
+  "devDependencies": {
+    "typescript": "^2.1.5"
+  },
+  "dependencies": {
+    "isomorphic-style-loader": "^1.1.0"
+  }
+}
