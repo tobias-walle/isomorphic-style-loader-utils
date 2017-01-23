@@ -2,8 +2,15 @@
   "name": "isomorphic-style-loader-decorator",
   "version": "1.0.0",
   "description": "A wrapper for the 'isomorphic-style-loader' which allows the use of Typescript decorators.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "typings": "lib/index",
+  "files": [
+    "lib"
+  ],
   "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "prepublish": "npm run clean && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
