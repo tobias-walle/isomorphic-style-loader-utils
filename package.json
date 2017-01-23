@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-decorator#readme",
   "devDependencies": {
+    "rimraf": "^2.5.4",
     "typescript": "^2.1.5"
   },
   "dependencies": {
