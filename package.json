@@ -1,7 +1,7 @@
 {
-  "name": "isomorphic-style-loader-decorator",
+  "name": "isomorphic-style-loader-utils",
   "version": "1.0.0",
-  "description": "A wrapper for the 'isomorphic-style-loader' which allows the use of Typescript decorators.",
+  "description": "Utilities for the 'isomorphic-style-loader'",
   "main": "lib/index.js",
   "typings": "lib/index",
   "files": [
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TobiasWalle/isomorphic-style-loader-decorator.git"
+    "url": "git+https://github.com/TobiasWalle/isomorphic-style-loader-utils.git"
   },
   "keywords": [
     "isomorphic-style-loader",
@@ -25,14 +25,15 @@
   "author": "Tobias Walle",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TobiasWalle/isomorphic-style-loader-decorator/issues"
+    "url": "https://github.com/TobiasWalle/isomorphic-style-loader-utils/issues"
   },
-  "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-decorator#readme",
+  "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-utils#readme",
   "devDependencies": {
+    "@types/react": "^15.0.2",
     "rimraf": "^2.5.4",
     "typescript": "^2.1.5"
   },
   "dependencies": {
-    "isomorphic-style-loader": "^1.1.0"
+    "react": "^15.4.2"
   }
 }
