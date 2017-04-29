@@ -9,7 +9,7 @@ plain javascript should work too.
 If you are using [npm](https://www.npmjs.com/) as your package manager, you can install the package with the following 
 command:
 ```
-npm install isomorphic-style-loader-decorator --save-dev
+npm install isomorphic-style-loader-utils --save-dev
 ```
 
 ### Dependencies
