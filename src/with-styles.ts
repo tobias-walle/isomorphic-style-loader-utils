@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as PropTypes from 'prop-types';
 
 /**
  * Register the component styles.
@@ -12,7 +12,7 @@ export function WithStyles(styles: any) {
     const oldContextTypes = Component.contextTypes || {};
     Component.contextTypes = {
       ...oldContextTypes,
-      insertCss: React.PropTypes.func
+      insertCss: PropTypes.func
     };
 
 

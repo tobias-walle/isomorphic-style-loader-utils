@@ -29,11 +29,13 @@
   },
   "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-utils#readme",
   "devDependencies": {
+    "@types/prop-types": "^15.5.1",
     "@types/react": "^15.0.23",
     "rimraf": "^2.5.4",
     "typescript": "^2.3.2"
   },
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15"
   },
   "peerDependencies": {
