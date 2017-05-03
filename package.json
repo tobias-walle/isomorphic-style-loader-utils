@@ -1,6 +1,6 @@
 {
   "name": "isomorphic-style-loader-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Utilities for the 'isomorphic-style-loader'",
   "main": "lib/index.js",
   "typings": "lib/index",
@@ -29,12 +29,14 @@
   },
   "homepage": "https://github.com/TobiasWalle/isomorphic-style-loader-utils#readme",
   "devDependencies": {
-    "@types/react": "^15.0.2",
+    "@types/react": "^15.0.23",
     "rimraf": "^2.5.4",
-    "typescript": "^2.1.5"
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "react": "^15"
   },
   "peerDependencies": {
-    "isomorphic-style-loader-utils": ">=1.0.0",
-    "react": ">=15"
+    "isomorphic-style-loader-utils": ">=1.0.0"
   }
 }
