@@ -17,19 +17,19 @@ export function WithStyles(styles: any) {
 
 
     // Subscribe to lifecycle methods
-    const oldComponentWillMount = Component.prototype.componentWillMount;
+    const oldComponentWillMount = Component.prototype.componentWillMount.bind(Component);
     Component.prototype.componentWillMount = function () {
       if (this.context.insertCss) {
         this.removeCss = this.context.insertCss(styles);
       }
       oldComponentWillMount && oldComponentWillMount();
-    };
+    }.bind(Component);
 
-    const oldComponentWillUnmount = Component.prototype.componentWillUnmount;
+    const oldComponentWillUnmount = Component.prototype.componentWillUnmount.bind(Component);
     Component.prototype.componentWillUnmount = function () {
       oldComponentWillUnmount && oldComponentWillUnmount();
       setTimeout(this.removeCss, 0);
-    }
+    }.bind(Component);
 
   }
 }
