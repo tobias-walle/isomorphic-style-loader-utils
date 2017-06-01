@@ -8,14 +8,14 @@ import * as React from 'react';
  */
 export function WithStyles(styles: any): any {
   return function<T extends {new (...args: any[]): React.Component<any, any>}>(Component: T) {
-    return class extends Component {
-      removeCss: () => void;
+    // Add context types
+    Component['contextTypes'] = {
+      ...Component['contextTypes'] || {},
+      insertCss: PropTypes.func
+    };
 
-      // Add context types
-      public contextTypes = {
-        ...super['contextTypes'] || {},
-        insertCss: PropTypes.func
-      };
+    class ComponentWithStyles extends Component {
+      removeCss: () => void;
 
       componentWillMount() {
         if (this.context.insertCss) {
@@ -37,5 +37,12 @@ export function WithStyles(styles: any): any {
       }
     }
 
+    // Set the old class name
+    Object.defineProperty(ComponentWithStyles, 'name', {
+      value: Component['name'],
+      writable: false
+    });
+
+    return ComponentWithStyles;
   }
 }
