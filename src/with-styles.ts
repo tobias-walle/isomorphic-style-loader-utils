@@ -1,5 +1,6 @@
 import * as PropTypes from 'prop-types';
 import * as React from 'react';
+import { Component } from 'react';
 
 /**
  * Register the component styles.
@@ -7,14 +8,13 @@ import * as React from 'react';
  * @return {(target:any)=>void} A function that wraps the target with the provided styles.
  */
 export function WithStyles(styles: any): any {
-  return function<T extends {new (...args: any[]): React.Component<any, any>}>(Component: T) {
+  return function <T extends { new (...args: any[]): React.Component<any, any> }>(Component: T) {
     // Add context types
-    Component['contextTypes'] = {
-      ...Component['contextTypes'] || {},
-      insertCss: PropTypes.func
-    };
-
     class ComponentWithStyles extends Component {
+      static contextTypes = {
+        ...Component['contextTypes'] || {},
+        insertCss: PropTypes.func
+      };
       removeCss: () => void;
 
       componentWillMount() {
